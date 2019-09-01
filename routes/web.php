@@ -35,3 +35,6 @@ Route::get('/socio', function () {
 Route::get('/voluntario', function () {
     return view('voluntario');
 });
+Route::get('/prueba', function () {
+    return view('prueba');
+});
