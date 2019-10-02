@@ -1,13 +1,8 @@
-<!doctype html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.layout')
 
-        <title>Haz una donación</title>
+@section('title', 'Haz una donación')
 
-    </head>
-    <body>
-    	<h1>Aquí va el haz una donación</h1>
-    </body>
-</html>
+@section('content')
+    <h1 class="text-6xl">Haz una donación</h1>
+    <p>Aquí irá el contenido</p>
+@stop

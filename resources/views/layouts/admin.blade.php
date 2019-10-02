@@ -4,8 +4,7 @@
 				<link rel="stylesheet" type="text/css" href="{{ mix('css/app.css') }}" />
 				<script src="{{ mix('js/app.js') }}"></script>
     </head>
-    <body class="antialiased bg-gray-200 h-full">
-        @section('sidebar')
+    <body class="antialiased bg-gray-200 min-h-screen">
 						<nav class="flex items-center justify-between flex-wrap bg-gray-900 p-6">
 							<div class="flex items-center flex-shrink-0 text-white mr-6">
 								<i class="px-1 text-3xl fas fa-globe-africa"></i>
@@ -32,44 +31,16 @@
 										<i class="fas fa-envelope-square"></i>
 									</a>
 								</div>
-								<div>
-									<a href="/donacion">
-										<button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-											Haz una donación
-										</button>
-									</a>
-									<a href="/socio">
-										<button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-											Hazte socio
-										</button>
-									</a>
-								</div>
 							</div>
-						</nav>
-						<nav class="flex items-center justify-between flex-wrap bg-gray-700 py-2 px-6">
-							<a href="quienes-somos" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white">
-								¿Quiénes somos?
-							</a>
-							<a href="que-hacemos" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white">
-								¿Qué hacemos?
-							</a>
-							<a href="/que-puedes-hacer-tu" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white">
-								¿Qué puedes hacer tú?
-							</a>
-							<a href="/blog" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white">
-								Blog
-							</a>
 						</nav>
         @show
 
-        <div class='flex-1 mx-auto text-gray-900 p-6'>
+        <div class='content flex-grow text-gray-900 p-6'>
             @yield('content')
         </div>
 
-				<footer class="text-center w-full bg-gray-900 p-4">
-					<div class="text-white">
+				<footer class="text-center text-white w-full bg-gray-900 p-4">
             Humancoop&trade;  2019
-					</div>
 				</footer>
     </body>
 </html>

@@ -32,6 +32,21 @@ Route::get('/quienes-somos', function () {
 Route::get('/socio', function () {
     return view('socio');
 });
+Route::get('/admin', function () {
+    return view('administracion');
+});
+Route::get('/login', function () {
+    return view('login');
+});
+Route::get('/recordar-contrasena', function () {
+    return view('recordar-contrasena');
+});
+Route::get('/crear-post', function () {
+    return view('crear-post');
+});
+Route::get('/usuarios', function () {
+    return view('usuarios');
+});
 Route::get('/voluntario', function () {
     return view('voluntario');
 });
