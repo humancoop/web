@@ -1,15 +1,8 @@
-<!doctype html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.layout')
 
-        <title>Qué puedes hacer tú</title>
+@section('title', '¿Qué puedes hacer tú?')
 
-    </head>
-    <body>
-    	<h1>Aquí va el qué puedes hacer tú</h1>
-			<a href="{{ url('/donacion') }}">Donacion</a>
-			<a href="{{ url('/socio') }}">Hazte socio</a>
-    </body>
-</html>
+@section('content')
+    <h1 class="text-6xl">¿Qué puedes hacer tú?</h1>
+    <p>Aquí irá el contenido</p>
+@stop

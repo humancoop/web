@@ -15,7 +15,7 @@ Route::get('/', function () {
     return view('inicio');
 });
 Route::get('/blog', function () {
-    return view('blog');
+    return view('blog')->with('items', App\User::paginate());
 });
 Route::get('/donacion', function () {
     return view('donacion');
@@ -34,7 +34,4 @@ Route::get('/socio', function () {
 });
 Route::get('/voluntario', function () {
     return view('voluntario');
-});
-Route::get('/prueba', function () {
-    return view('prueba');
 });
