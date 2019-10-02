@@ -15,7 +15,7 @@ Route::get('/', function () {
     return view('inicio');
 });
 Route::get('/blog', function () {
-    return view('blog')->with('items', App\User::paginate());
+    return view('blog')->with('posts', App\Post::paginate(5));
 });
 Route::get('/donacion', function () {
     return view('donacion');
