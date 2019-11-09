@@ -50,3 +50,12 @@ Route::get('/usuarios', function () {
 Route::get('/voluntario', function () {
     return view('voluntario');
 });
+Route::get('/territorios-liberados-saharauis', function () {
+    return view('territorios-liberados-saharauis');
+});
+Route::get('/territorios-liberados-saharauis/oftalmologia', function () {
+    return view('oftalmologia');
+});
+Route::get('/territorios-liberados-saharauis/odontologia', function () {
+    return view('odontologia');
+});
