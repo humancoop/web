@@ -59,3 +59,12 @@ Route::get('/territorios-liberados-saharauis/oftalmologia', function () {
 Route::get('/territorios-liberados-saharauis/odontologia', function () {
     return view('odontologia');
 });
+Route::get('/territorios-liberados-saharauis/enfermeria', function () {
+    return view('enfermeria');
+});
+Route::get('/territorios-liberados-saharauis/laboratorio', function () {
+    return view('laboratorio');
+});
+Route::get('/territorios-liberados-saharauis/medicina-general', function () {
+    return view('medicina-general');
+});

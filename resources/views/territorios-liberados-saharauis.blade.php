@@ -22,7 +22,7 @@
 				</div>
 			</div>
 			</a>
-			<a href="/territorios-liberados-saharauis">
+			<a href="/territorios-liberados-saharauis/medicina-general">
 			<div class="max-w-sm rounded overflow-hidden shadow-lg">
 				<img class="w-full" src="{{ asset('assets/images/medicina.jpg') }}"/>
 				<div class="px-6 py-4">
@@ -46,7 +46,7 @@
 				</div>
 			</div>
 			</a>
-			<a href="/territorios-liberados-saharauis">
+			<a href="/territorios-liberados-saharauis/laboratorio">
 			<div class="max-w-sm rounded overflow-hidden shadow-lg">
 				<img class="w-full" src="{{ asset('assets/images/laboratorio.jpg') }}"/>
 				<div class="px-6 py-4">
@@ -62,7 +62,7 @@
 				</div>
 			</div>
 			</a>
-			<a href="/territorios-liberados-saharauis">
+			<a href="/territorios-liberados-saharauis/enfermeria">
 			<div class="max-w-sm rounded overflow-hidden shadow-lg">
 				<img class="w-full" src="{{ asset('assets/images/enfermeria.jpg') }}"/>
 				<div class="px-6 py-4">

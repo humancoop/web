@@ -4,7 +4,7 @@
 
 @section('content')
 	<div class="bg-gray-400">
-		<img class="object-cover w-full" src="{{ asset('assets/images/manos.jpg') }}"/>
+		<img class="object-cover w-full" src="{{ asset('assets/images/oftalmologia_portada.jpg') }}"/>
 	</div>
   <h1 class="text-6xl text-center">Oftalmología</h1>
 	<p class='text-justify py-4'>	
