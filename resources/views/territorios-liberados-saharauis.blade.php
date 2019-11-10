@@ -8,7 +8,7 @@
 	</div>
   <h1 class="text-6xl text-center">Territorios liberados saharauis</h1>
 	<div class="flex mb-4">
-		<div class="w-5/6 bg-gray-400">
+		<div class="w-5/6">
 			<p class='text-justify py-4'>	
 				Aquí va el texto que va a escribir Cristina.
 			</p>
@@ -16,7 +16,7 @@
 		<div class="w-1/6 bg-gray-500">
 			<a href="/territorios-liberados-saharauis/odontologia">
 			<div class="max-w-sm rounded overflow-hidden shadow-lg">
-				<img class="w-full" src="{{ asset('assets/images/manos.jpg') }}"/>
+				<img class="w-full" src="{{ asset('assets/images/odontologia.jpg') }}"/>
 				<div class="px-6 py-4">
 					<div class="font-bold text-xl mb-2">Odontología</div>
 				</div>
@@ -24,7 +24,7 @@
 			</a>
 			<a href="/territorios-liberados-saharauis">
 			<div class="max-w-sm rounded overflow-hidden shadow-lg">
-				<img class="w-full" src="{{ asset('assets/images/manos.jpg') }}"/>
+				<img class="w-full" src="{{ asset('assets/images/medicina.jpg') }}"/>
 				<div class="px-6 py-4">
 					<div class="font-bold text-xl mb-2">Medicina general</div>
 				</div>
@@ -32,7 +32,7 @@
 			</a>
 			<a href="/territorios-liberados-saharauis">
 			<div class="max-w-sm rounded overflow-hidden shadow-lg">
-				<img class="w-full" src="{{ asset('assets/images/manos.jpg') }}"/>
+				<img class="w-full" src="{{ asset('assets/images/pediatria.jpg') }}"/>
 				<div class="px-6 py-4">
 					<div class="font-bold text-xl mb-2">Pediatría</div>
 				</div>
@@ -48,7 +48,7 @@
 			</a>
 			<a href="/territorios-liberados-saharauis">
 			<div class="max-w-sm rounded overflow-hidden shadow-lg">
-				<img class="w-full" src="{{ asset('assets/images/manos.jpg') }}"/>
+				<img class="w-full" src="{{ asset('assets/images/laboratorio.jpg') }}"/>
 				<div class="px-6 py-4">
 					<div class="font-bold text-xl mb-2">Laboratorio</div>
 				</div>
@@ -56,7 +56,7 @@
 			</a>
 			<a href="/territorios-liberados-saharauis">
 			<div class="max-w-sm rounded overflow-hidden shadow-lg">
-				<img class="w-full" src="{{ asset('assets/images/manos.jpg') }}"/>
+				<img class="w-full" src="{{ asset('assets/images/farmacia.jpg') }}"/>
 				<div class="px-6 py-4">
 					<div class="font-bold text-xl mb-2">Farmacia</div>
 				</div>
@@ -64,7 +64,7 @@
 			</a>
 			<a href="/territorios-liberados-saharauis">
 			<div class="max-w-sm rounded overflow-hidden shadow-lg">
-				<img class="w-full" src="{{ asset('assets/images/manos.jpg') }}"/>
+				<img class="w-full" src="{{ asset('assets/images/enfermeria.jpg') }}"/>
 				<div class="px-6 py-4">
 					<div class="font-bold text-xl mb-2">Enfermería</div>
 				</div>
@@ -72,7 +72,7 @@
 			</a>
 			<a href="/territorios-liberados-saharauis/oftalmologia">
 			<div class="max-w-sm rounded overflow-hidden shadow-lg">
-				<img class="w-full" src="{{ asset('assets/images/manos.jpg') }}"/>
+				<img class="w-full" src="{{ asset('assets/images/oftalmologia.jpg') }}"/>
 				<div class="px-6 py-4">
 					<div class="font-bold text-xl mb-2">Oftalmología</div>
 				</div>
