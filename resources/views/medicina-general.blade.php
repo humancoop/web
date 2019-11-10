@@ -8,4 +8,5 @@
 		<img class="object-cover w-full" src="{{ asset('assets/images/medicina_portada.jpg') }}"/>
 	</div>
   <h2 class="text-4xl">Falta texto</h2>
+	@include('squares')
 @endsection

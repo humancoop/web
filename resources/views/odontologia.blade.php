@@ -60,4 +60,5 @@
 			<li>¿Eres Protésico?</li>
 		</ul>
 	</p>	
+	@include('squares')
 @endsection

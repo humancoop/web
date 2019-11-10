@@ -22,4 +22,5 @@
 	<p class='text-justify py-4'>	
 		El Plan de Oftalmología en Territorios Liberados del Sáhara Occidental tiene como finalidad desarrollar un programa para la detección y tratamiento de patología oftalmológica, basado en el análisis previamente realizado de las necesidades de la población.
 	</p>	
+	@include('squares')
 @endsection
