@@ -3,10 +3,10 @@
 @section('title', '¿Quiénes somos?')
 
 @section('content')
+  <h1 class="text-center text-6xl">¿Quiénes somos?</h1>
 	<div class="bg-gray-400">
 		<img class="object-cover w-full" src="{{ asset('assets/images/manos.jpg') }}"/>
 	</div>
-  <h1 class="text-center text-6xl">¿Quiénes somos?</h1>
 	<div class="flex mb-4">
 		<div class="w-5/6 px-6">
 			<p class='text-justify py-4'>	

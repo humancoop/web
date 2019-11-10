@@ -3,10 +3,10 @@
 @section('title', 'Territorios liberados saharauis')
 
 @section('content')
+  <h1 class="text-6xl text-center">Territorios liberados saharauis</h1>
 	<div class="bg-gray-400">
 		<img class="object-cover w-full" src="{{ asset('assets/images/manos.jpg') }}"/>
 	</div>
-  <h1 class="text-6xl text-center">Territorios liberados saharauis</h1>
 	<div class="flex mb-4">
 		<div class="w-5/6">
 			<p class='text-justify py-4'>	
