@@ -54,7 +54,6 @@
 	</p>	
 	<p class='text-justify py-4'>	
 		<ul>
-			<li>¿Eres Protésico?</li>
 			<li>¿Te gusta la cooperación internacional? ¡Hazte voluntario, te necesitamos!</li>
 			<li>¿Te sumas a cambiar el Mundo?</li>
 			<li>¿Eres Protésico?</li>

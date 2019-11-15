@@ -68,3 +68,12 @@ Route::get('/territorios-liberados-saharauis/laboratorio', function () {
 Route::get('/territorios-liberados-saharauis/medicina-general', function () {
     return view('medicina-general');
 });
+Route::get('/territorios-liberados-saharauis/ginecologia', function () {
+    return view('ginecologia');
+});
+Route::get('/territorios-liberados-saharauis/farmacia', function () {
+    return view('farmacia');
+});
+Route::get('/territorios-liberados-saharauis/pediatria', function () {
+    return view('pediatria');
+});

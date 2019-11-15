@@ -3,8 +3,8 @@
 @section('title', 'Inicio')
 
 @section('content')
-	<div class="bg-gray-400">
-		<img class="object-cover w-full" src="{{ asset('assets/images/manos.jpg') }}"/>
+	<div class="my-8">
+		<img class="object-cover w-full" src="{{ asset('assets/images/logo_grande.png') }}"/>
 	</div>
 	<p class='text-justify py-4'>	
 		HumanCoop es una Asociación de Voluntarios para la Cooperación y el Desarrollo,
