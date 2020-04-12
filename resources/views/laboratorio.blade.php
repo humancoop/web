@@ -5,7 +5,7 @@
 @section('content')
   <h1 class="text-6xl text-center">Laboratorio</h1>
 	<div class="bg-gray-400">
-		<img class="object-cover w-full" src="{{ asset('assets/images/laboratorio_portada.jpg') }}"/>
+		<img class="object-cover w-full" src="{{ secure_asset('assets/images/laboratorio_portada.jpg') }}"/>
 	</div>
 		<p class='text-justify py-4'>Hasta el año 2018, los Territorios Liberados carecían prácticamente de pruebas de análisis clínicos que ayudaran al diagnóstico, manejo y seguimiento de los pacientes de esta región. Esto hacía imposible el cumplimiento del Manual Clínico Terapéutico para la Atención Primaria de la RASD y de ciertos Programas Nacionales de Salud que hasta entonces solo se cumplían, al menos de forma parcial, en los campamentos de refugiados de Tindouf.</p>
 

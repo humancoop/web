@@ -5,7 +5,7 @@
 @section('content')
   <h1 class="text-6xl text-center">Odontología</h1>
 	<div class="bg-gray-400">
-		<img class="object-cover w-full" src="{{ asset('assets/images/odontologia_portada.jpg') }}"/>
+		<img class="object-cover w-full" src="{{ secure_asset('assets/images/odontologia_portada.jpg') }}"/>
 	</div>
   <h2 class="text-4xl">Plan de escuelas de salud bucodental</h2>
 	<p class='text-justify py-4'>	
