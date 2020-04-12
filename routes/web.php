@@ -77,3 +77,6 @@ Route::get('/territorios-liberados-saharauis/farmacia', function () {
 Route::get('/territorios-liberados-saharauis/pediatria', function () {
     return view('pediatria');
 });
+Route::get('/quienes-somos/memorias', function () {
+    return view('memorias-anuales');
+});
