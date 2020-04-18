@@ -4,14 +4,19 @@
 
 @section('content')
 	<div class="my-8">
-		<img class="object-cover w-full" src="{{ secure_asset('assets/images/logo_grande.png') }}"/>
+        <thumbor
+          src="{{ secure_asset('assets/images/logo_grande.png') }}"
+          class="object-cover w-full"
+          width="896"
+          height=""
+        /></thumbor>
 	</div>
-	<p class='text-justify py-4'>	
+	<p class='text-justify py-4'>
 		HumanCoop es una Asociación de Voluntarios para la Cooperación y el Desarrollo,
 		que nace en 2019 para actuar en países y zonas del mundo en las que su
 		intervención y colaboración pueda resultar de utilidad social.
 	</p>
-	<p class='text-justify py-4'>	
+	<p class='text-justify py-4'>
 		La asociación es producto de las inquietudes de un amplio y variado grupo
 		de voluntarios, con experiencia acumulada en diversos países de África. Desde
 		2014 desarrollamos un proyecto de cooperación en el Sáhara Occidental bajo la
@@ -26,7 +31,7 @@
 		objetivo común, apostando por hacer “algo más”, y luchando, ahora como
 		HumanCoop, para el desarrollo de poblaciones desfavorecidas.
 	</p>
-	<p class='text-justify py-4'>	
+	<p class='text-justify py-4'>
 		Entre los proyectos que lleva a cabo HumanCoop se encuentran la
 		FORMACIÓN Y EMPODERAMIENTO de personal local para el desarrollo de un
 		sistema de salud propio; actividades de Promoción para la Salud y PREVENCIÓN
@@ -35,10 +40,10 @@
 		de las poblaciones objeto de nuestra actuación como de nuestros propios
 		voluntarios.
 	</p>
-	<p class='text-justify py-4'>	
+	<p class='text-justify py-4'>
 		HumanCoop nace de las PERSONAS que la forman. Somos Personas que
 		conectamos con Personas, y siempre damos la máxima importancia al voluntario y
 		a su experiencia en este proyecto.
 		¿TE SUMAS A CAMBIAR EL MUNDO?
-	</p>	
+	</p>
 @endsection

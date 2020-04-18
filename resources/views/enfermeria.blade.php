@@ -8,7 +8,7 @@
         <thumbor
           src="{{ secure_asset('assets/images/enfermeria_portada.jpg') }}"
           class="object-cover w-full"
-          width="891"
+          width="896"
           height=""
         /></thumbor>
 	</div>

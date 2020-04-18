@@ -5,7 +5,12 @@
 @section('content')
   <h1 class="text-center text-6xl">¿Quiénes somos?</h1>
 	<div class="bg-gray-400">
-		<img class="object-cover w-full" src="{{ secure_asset('assets/images/manos.jpg') }}"/>
+        <thumbor
+          src="{{ secure_asset('assets/images/manos.jpg') }}"
+          class="object-cover w-full"
+          width="896"
+          height=""
+        /></thumbor>
 	</div>
 	<div class="flex mb-4">
 		<div class="w-5/6 px-6">

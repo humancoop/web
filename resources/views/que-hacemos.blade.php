@@ -8,7 +8,12 @@
 		<div class="w-1/2 p-4">
 			<a href="/territorios-liberados-saharauis">
 			<div class="max-w-sm rounded shadow-lg p-4 bg-white">
-				<img class="w-full" src="{{ secure_asset('assets/images/Human-coop-sahara.png') }}"/>
+                <thumbor
+                  src="{{ secure_asset('assets/images/Human-coop-sahara.png') }}"
+                  width="200"
+                  height=""
+                  class="w-full"
+                /></thumbor>
 			</div>
 			</a>
 		</div>
