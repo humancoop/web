@@ -1,10 +1,11 @@
 <html>
     <head>
         <title>Humancoop - @yield('title')</title>
-				<link rel="stylesheet" type="text/css" href="{{ mix('css/app.css') }}" />
-				<script src="{{ mix('js/app.js') }}"></script>
+        <meta name="csrf-token" content="{{ csrf_token() }}">
+		<link rel="stylesheet" type="text/css" href="{{ mix('css/app.css') }}" />
     </head>
     <body class="antialiased bg-gray-200 h-full">
+      <div id="app">
         @section('sidebar')
 						<nav class="flex items-center justify-between flex-wrap bg-gray-900 p-6">
 							<a href="/" class="flex items-center flex-shrink-0 text-white mr-6">
@@ -71,5 +72,7 @@
             Humancoop&trade;  2019
 					</div>
 				</footer>
+      </div>
+	  <script src="{{ mix('js/app.js') }}"></script>
     </body>
 </html>
