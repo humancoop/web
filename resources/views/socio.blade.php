@@ -4,7 +4,8 @@
 
 @section('content')
     <h1 class="text-6xl text-center">Hazte socio</h1>
-		<form class="p-10 w-full bg-gray-400">
+		<form class="p-10 w-full bg-gray-400" method="POST" action="/socio">
+            @csrf
 			<div class="md:flex md:items-center mb-6">
 				<div class="md:w-1/3">
 					<label class="block font-bold md:text-right mb-1 md:mb-0 pr-4" for="inline-full-name">
@@ -12,7 +13,7 @@
 					</label>
 				</div>
 				<div class="md:w-2/3">
-					<input class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="inline-full-name" type="text" placeholder="Nombre y Apellidos">
+					<input class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="name" name="name" type="text" placeholder="Nombre y Apellidos">
 				</div>
 			</div>
 			<div class="md:flex md:items-center mb-6">
@@ -22,7 +23,7 @@
 					</label>
 				</div>
 				<div class="md:w-2/3">
-					<input class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="inline-full-name" type="text" placeholder="DNI">
+					<input class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="name" name="name" type="text" placeholder="DNI">
 				</div>
 			</div>
 			<div class="md:flex md:items-center mb-6">
@@ -32,7 +33,7 @@
 					</label>
 				</div>
 				<div class="md:w-2/3">
-					<input class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="inline-full-name" type="text" placeholder="Teléfono">
+					<input class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="phone" name="phone" type="text" placeholder="Teléfono">
 				</div>
 			</div>
 			<div class="md:flex md:items-center mb-6">
@@ -42,7 +43,7 @@
 					</label>
 				</div>
 				<div class="md:w-2/3">
-					<input class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="inline-full-name" type="text" placeholder="Correo electrónico">
+					<input class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="email" name="email" type="text" placeholder="Correo electrónico">
 				</div>
 			</div>
 			<div class="md:flex md:items-center mb-6">
@@ -52,7 +53,7 @@
 					</label>
 				</div>
 				<div class="md:w-2/3">
-					<input class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="inline-full-name" type="text" placeholder="Lugar de nacimiento">
+					<input class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" name="birthplace" id="birthplace" type="text" placeholder="Lugar de nacimiento">
 				</div>
 			</div>
 			<div class="md:flex md:items-center mb-6">
@@ -62,7 +63,7 @@
 					</label>
 				</div>
 				<div class="md:w-2/3">
-					<input class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="inline-full-name" type="text" placeholder="Fecha de nacimiento">
+					<input class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="birthdate" name="birthdate" type="text" placeholder="Fecha de nacimiento">
 				</div>
 			</div>
 			<div class="md:flex md:items-center mb-6">
@@ -82,7 +83,7 @@
 					</label>
 				</div>
 				<div class="md:w-2/3">
-					<input class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="inline-full-name" type="text" placeholder="Ciudad">
+					<input class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="city" name="city" type="text" placeholder="Ciudad">
 				</div>
 			</div>
 			<div class="md:flex md:items-center mb-6">
@@ -92,7 +93,7 @@
 					</label>
 				</div>
 				<div class="md:w-2/3">
-					<input class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="inline-full-name" type="text" placeholder="Dirección">
+					<input class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="address" name="address" type="text" placeholder="Dirección">
 				</div>
 			</div>
 			<div class="md:flex md:items-center mb-6">
@@ -102,7 +103,7 @@
 					</label>
 				</div>
 				<div class="md:w-2/3">
-					<input class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="inline-full-name" type="text" placeholder="Código postal">
+					<input class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" name="postcode" id="postcode" type="text" placeholder="Código postal">
 				</div>
 			</div>
 			<div class="md:flex md:items-center mb-6">

@@ -32,6 +32,7 @@ Route::get('/quienes-somos', function () {
 Route::get('/socio', function () {
     return view('socio');
 });
+Route::post('/socio', 'SocioController@alta');
 Route::get('/admin', function () {
     return view('administracion');
 });
