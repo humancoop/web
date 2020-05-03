@@ -105,7 +105,7 @@
             </div>
             <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
-                    Númnero de pasaporte
+                    Número de pasaporte
                 </label>
                 <input class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="passport_number" name="passport_number" type="text" placeholder="Número de pasaporte">
                 <p class="text-red-500 text-xs italic">Por favor, rellena este campo.</p>
@@ -132,7 +132,7 @@
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
                     Fecha de expedición
                 </label>
-                <input class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="father_name" name="father_name" type="text" placeholder="Nombre del padre">
+                <input class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="issue_date" name="issue_date" type="date" placeholder="Fecha de expedición">
                 <p class="text-red-500 text-xs italic">Por favor, rellena este campo.</p>
             </div>
             <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
