@@ -29,18 +29,21 @@
 									<a href="https://twitter.com/human_coop" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
 										<i class="fab fa-twitter-square"></i>
 									</a>
+									<a href="https://open.spotify.com/user/31umi7ntu6zmm5nhl3u5etfhjnqy?si=EyPFgzvyQpmBsdxHnGbzXQ" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
+										<i class="fab fa-spotify"></i>
+									</a>
 									<a href="email" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
 										<i class="fas fa-envelope-square"></i>
 									</a>
 								</div>
 								<div>
-									<a href="/donacion">
-										<button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+									<a href="/donacion" style="display:none;">
+										<button class="bg-teal-500 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded">
 											Haz una donación
 										</button>
 									</a>
 									<a href="/socio">
-										<button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+										<button class="bg-teal-500 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded">
 											Hazte socio
 										</button>
 									</a>
@@ -54,10 +57,10 @@
 							<a href="/que-hacemos" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white">
 								¿Qué hacemos?
 							</a>
-							<a href="/que-puedes-hacer-tu" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white">
+							<a href="/socio" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white">
 								¿Qué puedes hacer tú?
 							</a>
-							<a href="/blog" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white">
+							<a href="/blog" style="display:none;" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white">
 								Blog
 							</a>
 						</nav>
@@ -69,7 +72,7 @@
 
 				<footer class="text-center w-full mt-16 bg-gray-900 p-4">
 					<div class="text-white">
-            Humancoop&trade;  2019
+            Humancoop 2019 - 2020
 					</div>
 				</footer>
       </div>
