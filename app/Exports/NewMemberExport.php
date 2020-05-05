@@ -10,15 +10,17 @@ class NewMemberExport implements FromView
 {
     protected $newMemberId;
 
-    public function __construct(int $newMemberId)
+    public function __construct(/*Member $member*/ object $data)
     {
-        $this->newMemberId = $newMemberId;
+        #$this->member = $member;
+        $this->data = $data;
     }
 
     public function view(): View
     {
         return view('exports.new_member', [
-            'new_member' => NewMemberInfo::find($this->newMemberId)
+            #'new_member' => $this->member
+            'new_member' => $this->data
         ]);
     }
 }

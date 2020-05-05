@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
+use Maatwebsite\Excel\Facades\Excel;
+use App\Exports\NewMemberExport;
 use App\NewMemberInfo;
 
 class NewMemberController extends Controller
@@ -44,7 +46,8 @@ class NewMemberController extends Controller
                         ->withInput();
         }
 
-        NewMemberInfo::create($request->input());
+        return Excel::download(new NewMemberExport((object) $request->input()), 'userd.xlsx');
+        #NewMemberInfo::create($request->input());
 
         return view('socio');
     }
