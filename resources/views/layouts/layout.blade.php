@@ -4,6 +4,7 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
 		<link rel="stylesheet" type="text/css" href="{{ mix('css/app.css') }}" />
     </head>
+<<<<<<< HEAD
     <body class="antialiased bg-gray-200">
       <div id="app" class="flex flex-col h-screen justify-between">
 		<header>
