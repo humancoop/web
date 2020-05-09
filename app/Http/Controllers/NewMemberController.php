@@ -74,7 +74,7 @@ class NewMemberController extends Controller
                 'first_time_in_humancoop' => True,
             ]
         ));
-        Excel::store(new NewMemberExport((object) $request->input()), 'userd.xlsx');
+        Excel::store(new NewMemberExport((object) $request->input()), "{$request->get('nif')}.xlsx");
 
         return view('socio-confirm');
     }
