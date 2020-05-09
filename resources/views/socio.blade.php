@@ -11,9 +11,13 @@
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
                     Nombre y apellidos
                 </label>
-                <input class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="full_name" name="full_name" type="text" placeholder="Nombre y apellidos">
+                <input class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="full_name" value="{{old('full_name')}}" name="full_name" type="text" placeholder="Nombre y apellidos">
                 @error('full_name')
-                    <p class="text-red-500 text-xs italic">Por favor, rellena este campo.</p>
+					<ul>
+						@foreach ($errors->get('full_name') as $error)
+							<li class="text-red-500 text-xs italic">{{ $error }}</li>
+						@endforeach
+					</ul>
                 @enderror
             </div>
         </div>
@@ -22,18 +26,26 @@
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
                     Lugar de nacimiento
                 </label>
-                <input class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="birthplace" name="birthplace" type="text" placeholder="Lugar de nacimiento">
-                @error('birthdate')
-                    <p class="text-red-500 text-xs italic">Por favor, rellena este campo.</p>
+                <input class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="birthplace" value="{{old('birthplace')}}" name="birthplace" type="text" placeholder="Lugar de nacimiento">
+                @error('birthplace')
+					<ul>
+						@foreach ($errors->get('birthplace') as $error)
+							<li class="text-red-500 text-xs italic">{{ $error }}</li>
+						@endforeach
+					</ul>
                 @enderror
             </div>
             <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
                     Fecha de nacimiento
                 </label>
-                <input class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="birthdate" name="birthdate" type="date" placeholder="Fecha de nacimiento">
-                @error('birthplace')
-                    <p class="text-red-500 text-xs italic">Por favor, rellena este campo.</p>
+                <input class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="birthdate" value="{{old('birthdate')}}" name="birthdate" type="date" placeholder="Fecha de nacimiento">
+                @error('birthdate')
+					<ul>
+						@foreach ($errors->get('birthdate') as $error)
+							<li class="text-red-500 text-xs italic">{{ $error }}</li>
+						@endforeach
+					</ul>
                 @enderror
             </div>
         </div>
@@ -42,18 +54,26 @@
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
                     Provincia
                 </label>
-                <input class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="province" name="province" type="select" placeholder="Provincia">
+                <input class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="province" value="{{old('province')}}" name="province" type="select" placeholder="Provincia">
                 @error('province')
-                    <p class="text-red-500 text-xs italic">Por favor, rellena este campo.</p>
+					<ul>
+						@foreach ($errors->get('province') as $error)
+							<li class="text-red-500 text-xs italic">{{ $error }}</li>
+						@endforeach
+					</ul>
                 @enderror
             </div>
             <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
                     Código postal
                 </label>
-                <input class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="postal_code" name="postal_code" type="text" placeholder="Código postal">
+                <input class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="postal_code" value="{{old('postal_code')}}" name="postal_code" type="text" placeholder="Código postal">
                 @error('postal_code')
-                    <p class="text-red-500 text-xs italic">Por favor, rellena este campo.</p>
+					<ul>
+						@foreach ($errors->get('postal_code') as $error)
+							<li class="text-red-500 text-xs italic">{{ $error }}</li>
+						@endforeach
+					</ul>
                 @enderror
             </div>
         </div>
@@ -62,9 +82,13 @@
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
                     Dirección
                 </label>
-                <input class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="address" name="address" type="text" placeholder="Domicilio">
+                <input class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="address" value="{{old('address')}}" name="address" type="text" placeholder="Domicilio">
                 @error('address')
-                    <p class="text-red-500 text-xs italic">Por favor, rellena este campo.</p>
+					<ul>
+						@foreach ($errors->get('address') as $error)
+							<li class="text-red-500 text-xs italic">{{ $error }}</li>
+						@endforeach
+					</ul>
                 @enderror
             </div>
         </div>
@@ -73,18 +97,26 @@
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
                     Localidad
                 </label>
-                <input class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="city" name="city" type="text" placeholder="Localidad">
+                <input class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="city" value="{{old('city')}}" name="city" type="text" placeholder="Localidad">
                 @error('city')
-                    <p class="text-red-500 text-xs italic">Por favor, rellena este campo.</p>
+					<ul>
+						@foreach ($errors->get('city') as $error)
+							<li class="text-red-500 text-xs italic">{{ $error }}</li>
+						@endforeach
+					</ul>
                 @enderror
             </div>
             <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
                     Provincia
                 </label>
-                <input class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="province" name="province" type="select" placeholder="Provincia">
+                <input class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="province" value="{{old('province')}}" name="province" type="select" placeholder="Provincia">
                 @error('province')
-                    <p class="text-red-500 text-xs italic">Por favor, rellena este campo.</p>
+					<ul>
+						@foreach ($errors->get('province') as $error)
+							<li class="text-red-500 text-xs italic">{{ $error }}</li>
+						@endforeach
+					</ul>
                 @enderror
             </div>
         </div>
@@ -93,27 +125,39 @@
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
                     Email
                 </label>
-                <input class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="email" name="email" type="email" placeholder="E-mail">
+                <input class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="email" value="{{old('email')}}" name="email" type="email" placeholder="E-mail">
                 @error('email')
-                    <p class="text-red-500 text-xs italic">Por favor, rellena este campo.</p>
+	 			<ul>
+					@foreach ($errors->get('email') as $error)
+						<li class="text-red-500 text-xs italic">{{ $error }}</li>
+					@endforeach
+				</ul>
                 @enderror
             </div>
             <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
                     Teléfono móvil
                 </label>
-                <input class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="phone_number" name="phone_number" type="tel" placeholder="Teléfono móvil">
+                <input class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="phone_number" value="{{old('phone_number')}}" name="phone_number" type="tel" placeholder="Teléfono móvil">
                 @error('phone_number')
-                    <p class="text-red-500 text-xs italic">Por favor, rellena este campo.</p>
+					<ul>
+						@foreach ($errors->get('phone_number') as $error)
+							<li class="text-red-500 text-xs italic">{{ $error }}</li>
+						@endforeach
+					</ul>
                 @enderror
             </div>
             <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
                     Otro número de contacto
                 </label>
-                <input class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="secondary_phone_number" name="secondary_phone_number" type="tel" placeholder="Otro móvil de contacto">
+                <input class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="secondary_phone_number" value="{{old('secondary_phone_number')}}" name="secondary_phone_number" type="tel" placeholder="Otro móvil de contacto">
                 @error('secondary_phone_number')
-                    <p class="text-red-500 text-xs italic">Por favor, rellena este campo.</p>
+					<ul>
+						@foreach ($errors->get('secondary_phone_number') as $error)
+							<li class="text-red-500 text-xs italic">{{ $error }}</li>
+						@endforeach
+					</ul>
                 @enderror
             </div>
         </div>
@@ -122,18 +166,26 @@
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
                     Nif
                 </label>
-                <input class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="nif" name="nif" type="text" placeholder="Nif">
+                <input class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="nif" value="{{old('nif')}}" name="nif" type="text" placeholder="Nif">
                 @error('nif')
-                    <p class="text-red-500 text-xs italic">Por favor, rellena este campo.</p>
+					<ul>
+						@foreach ($errors->get('nif') as $error)
+							<li class="text-red-500 text-xs italic">{{ $error }}</li>
+						@endforeach
+					</ul>
                 @enderror
             </div>
             <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
                     Número de pasaporte
                 </label>
-                <input class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="passport_number" name="passport_number" type="text" placeholder="Número de pasaporte">
+                <input class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="passport_number" value="{{old('passport_number')}}" name="passport_number" type="text" placeholder="Número de pasaporte">
                 @error('passport_number')
-                    <p class="text-red-500 text-xs italic">Por favor, rellena este campo.</p>
+					<ul>
+						@foreach ($errors->get('passport_number') as $error)
+							<li class="text-red-500 text-xs italic">{{ $error }}</li>
+						@endforeach
+					</ul>
                 @enderror
             </div>
         </div>
@@ -142,18 +194,26 @@
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
                     Nombre del padre
                 </label>
-                <input class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="father_name" name="father_name" type="text" placeholder="Nombre del padre">
+                <input class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="father_name" value="{{old('father_name')}}" name="father_name" type="text" placeholder="Nombre del padre">
                 @error('father_name')
-                    <p class="text-red-500 text-xs italic">Por favor, rellena este campo.</p>
+					<ul>
+						@foreach ($errors->get('father_name') as $error)
+							<li class="text-red-500 text-xs italic">{{ $error }}</li>
+						@endforeach
+					</ul>
                 @enderror
             </div>
             <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
                     Nombre de la madre
                 </label>
-                <input class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="mother_name" name="mother_name" type="text" placeholder="Nombre de la madre">
+                <input class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="mother_name" value="{{old('mother_name')}}" name="mother_name" type="text" placeholder="Nombre de la madre">
                 @error('mother_name')
-                    <p class="text-red-500 text-xs italic">Por favor, rellena este campo.</p>
+					<ul>
+						@foreach ($errors->get('mother_name') as $error)
+							<li class="text-red-500 text-xs italic">{{ $error }}</li>
+						@endforeach
+					</ul>
                 @enderror
             </div>
         </div>
@@ -162,27 +222,39 @@
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
                     Fecha de expedición
                 </label>
-                <input class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="issue_date" name="issue_date" type="date" placeholder="Fecha de expedición">
+                <input class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="issue_date" value="{{old('issue_date')}}" name="issue_date" type="date" placeholder="Fecha de expedición">
                 @error('issue_date')
-                    <p class="text-red-500 text-xs italic">Por favor, rellena este campo.</p>
+					<ul>
+						@foreach ($errors->get('issue_date') as $error)
+							<li class="text-red-500 text-xs italic">{{ $error }}</li>
+						@endforeach
+					</ul>
                 @enderror
             </div>
             <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
                     Lugar de expedición
                 </label>
-                <input class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="issue_location" name="issue_location" type="text" placeholder="Lugar de expedición">
+                <input class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="issue_location" value="{{old('issue_location')}}" name="issue_location" type="text" placeholder="Lugar de expedición">
                 @error('issue_location')
-                    <p class="text-red-500 text-xs italic">Por favor, rellena este campo.</p>
+					<ul>
+						@foreach ($errors->get('issue_location') as $error)
+							<li class="text-red-500 text-xs italic">{{ $error }}</li>
+						@endforeach
+					</ul>
                 @enderror
             </div>
             <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
                     Fecha de validez
                 </label>
-                <input class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="validity_date" name="validity_date" type="date" placeholder="Fecha de validez">
+                <input class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="validity_date" value="{{old('validity_date')}}" name="validity_date" type="date" placeholder="Fecha de validez">
                 @error('issue_date')
-                    <p class="text-red-500 text-xs italic">Por favor, rellena este campo.</p>
+					<ul>
+						@foreach ($errors->get('issue_date') as $error)
+							<li class="text-red-500 text-xs italic">{{ $error }}</li>
+						@endforeach
+					</ul>
                 @enderror
             </div>
         </div>
@@ -197,9 +269,13 @@
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
                     Número de cuenta voluntario
                 </label>
-                <input class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="account_number" name="account_number" type="text" placeholder="Número de cuenta voluntario">
+                <input class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="account_number" value="{{old('account_number')}}" name="account_number" type="text" placeholder="Número de cuenta voluntario">
                 @error('account_number')
-                    <p class="text-red-500 text-xs italic">Por favor, rellena este campo.</p>
+					<ul>
+						@foreach ($errors->get('account_number') as $error)
+							<li class="text-red-500 text-xs italic">{{ $error }}</li>
+						@endforeach
+					</ul>
                 @enderror
             </div>
         </div>
@@ -216,18 +292,26 @@
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
                     Formación
                 </label>
-                <input class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="training" name="training" type="text" placeholder="Formación">
+                <input class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="training" value="{{old('training')}}" name="training" type="text" placeholder="Formación">
                 @error('training')
-                    <p class="text-red-500 text-xs italic">Por favor, rellena este campo.</p>
+					<ul>
+						@foreach ($errors->get('training') as $error)
+							<li class="text-red-500 text-xs italic">{{ $error }}</li>
+						@endforeach
+					</ul>
                 @enderror
             </div>
             <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
                     Especialidad
                 </label>
-                <input class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="speciality" name="speciality" type="text" placeholder="Especialidad">
+                <input class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="speciality" value="{{old('speciality')}}" name="speciality" type="text" placeholder="Especialidad">
                 @error('speciality')
-                    <p class="text-red-500 text-xs italic">Por favor, rellena este campo.</p>
+					<ul>
+						@foreach ($errors->get('speciality') as $error)
+							<li class="text-red-500 text-xs italic">{{ $error }}</li>
+						@endforeach
+					</ul>
                 @enderror
             </div>
         </div>
@@ -236,18 +320,26 @@
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
                     Experiencia profesional
                 </label>
-                <input class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="professional_experience" name="professional_experience" type="text" placeholder="Experiencia profesional">
+                <input class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="professional_experience" value="{{old('professional_experience')}}" name="professional_experience" type="text" placeholder="Experiencia profesional">
                 @error('professional_experience')
-                    <p class="text-red-500 text-xs italic">Por favor, rellena este campo.</p>
+					<ul>
+						@foreach ($errors->get('professional_experience') as $error)
+							<li class="text-red-500 text-xs italic">{{ $error }}</li>
+						@endforeach
+					</ul>
                 @enderror
             </div>
             <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
                     Años de experiencia
                 </label>
-                <input class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="years_of_experience" name="years_of_experience" min="0" type="number" placeholder="Años de experiencia">
+                <input class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="years_of_experience" value="{{old('years_of_experience')}}" name="years_of_experience" min="0" type="number" placeholder="Años de experiencia">
                 @error('years_of_experience')
-                    <p class="text-red-500 text-xs italic">Por favor, rellena este campo.</p>
+					<ul>
+						@foreach ($errors->get('years_of_experience') as $error)
+							<li class="text-red-500 text-xs italic">{{ $error }}</li>
+						@endforeach
+					</ul>
                 @enderror
             </div>
         </div>
@@ -256,9 +348,13 @@
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
                     Motivaciones
                 </label>
-                <textarea class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="motivations" name="motivations" type="text" placeholder="Motivaciones"></textarea>
+                <textarea class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="motivations" name="motivations" type="text" placeholder="Motivaciones">{{old('motivations')}}</textarea>
                 @error('motivations')
-                    <p class="text-red-500 text-xs italic">Por favor, rellena este campo.</p>
+					<ul>
+						@foreach ($errors->get('motivations') as $error)
+							<li class="text-red-500 text-xs italic">{{ $error }}</li>
+						@endforeach
+					</ul>
                 @enderror
             </div>
         </div>
@@ -273,9 +369,13 @@
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
                     Actividad desarrollada
                 </label>
-                <input class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="volunteering_experience_info" name="volunteering_experience_info" type="text" placeholder="Actividad desarrollada">
+                <input class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="volunteering_experience_info" value="{{old('volunteering_experience_info')}}" name="volunteering_experience_info" type="text" placeholder="Actividad desarrollada">
                 @error('volunteering_experience_info')
-                    <p class="text-red-500 text-xs italic">Por favor, rellena este campo.</p>
+					<ul>
+						@foreach ($errors->get('volunteering_experience_info') as $error)
+							<li class="text-red-500 text-xs italic">{{ $error }}</li>
+						@endforeach
+					</ul>
                 @enderror
             </div>
         </div>
@@ -292,9 +392,13 @@
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
                     ¿Dónde nos conociste?
                 </label>
-                <input class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="where_did_you_know" name="where_did_you_know" type="text" placeholder="Experiencia profesional">
+                <input class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="where_did_you_know" value="{{old('where_did_you_know')}}" name="where_did_you_know" type="text" placeholder="Experiencia profesional">
                 @error('where_did_you_know')
-                    <p class="text-red-500 text-xs italic">Por favor, rellena este campo.</p>
+					<ul>
+						@foreach ($errors->get('where_did_you_know') as $error)
+							<li class="text-red-500 text-xs italic">{{ $error }}</li>
+						@endforeach
+					</ul>
                 @enderror
             </div>
         </div>
