@@ -64,10 +64,10 @@ class NewMemberController extends Controller
                         ->withInput();
         }
 
-        return Excel::download(new NewMemberExport((object) $request->input()), 'userd.xlsx');
         #NewMemberInfo::create($request->input());
+        Excel::store(new NewMemberExport((object) $request->input()), 'userd.xlsx');
 
-        return view('socio');
+        return view('socio-confirm');
     }
 
 }
