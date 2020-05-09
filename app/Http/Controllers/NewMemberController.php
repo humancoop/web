@@ -64,7 +64,16 @@ class NewMemberController extends Controller
                         ->withInput();
         }
 
-        #NewMemberInfo::create($request->input());
+        NewMemberInfo::create(array_merge(
+            $request->input(),
+            //TODO: This inputs still have to be designed
+            [
+                'is_sanitary' => True,
+                'has_volunteering_experience' => True,
+                'already_a_member' => True,
+                'first_time_in_humancoop' => True,
+            ]
+        ));
         Excel::store(new NewMemberExport((object) $request->input()), 'userd.xlsx');
 
         return view('socio-confirm');
