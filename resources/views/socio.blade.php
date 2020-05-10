@@ -263,7 +263,13 @@
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
                     Ya soy socio de Humancoop
                 </label>
-                <input class="mr-2 leading-tight" type="checkbox">
+                <div class="mb-2">
+                    <div class="form-switch inline-block align-middle">
+                        <input type="checkbox" name="1" id="1" class="form-switch-checkbox" />
+                        <label class="form-switch-label" for="1"></label>
+                    </div>
+                    <label class="text-xs text-grey-dark" for="1">Default</label>
+                </div>
             </div>
             <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
