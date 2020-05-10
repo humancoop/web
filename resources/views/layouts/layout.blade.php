@@ -4,77 +4,17 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
 		<link rel="stylesheet" type="text/css" href="{{ mix('css/app.css') }}" />
     </head>
-    <body class="antialiased bg-gray-200 h-full">
-      <div id="app">
-        @section('sidebar')
-						<nav class="flex items-center justify-between flex-wrap bg-gray-900 p-6">
-							<a href="/" class="flex items-center flex-shrink-0 text-white mr-6">
-								<i class="px-1 text-3xl fas fa-globe-africa"></i>
-								<span class="font-semibold text-xl tracking-tight">Human</span>
-								<span class="font-semibold text-xl tracking-tight text-teal-500">Coop</span>
-							</a>
-							<div class="block lg:hidden">
-								<button class="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white">
-									<svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
-								</button>
-							</div>
-							<div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
-								<div class="text-sm lg:flex-grow">
-									<a href="https://facebook.com/humancoop.ong.9" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
-										<i class="fab fa-facebook-square"></i>
-									</a>
-									<a href="https://instagram.com/ong.humancoop" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
-										<i class="fab fa-instagram"></i>
-									</a>
-									<a href="https://twitter.com/human_coop" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
-										<i class="fab fa-twitter-square"></i>
-									</a>
-									<a href="https://open.spotify.com/user/31umi7ntu6zmm5nhl3u5etfhjnqy?si=EyPFgzvyQpmBsdxHnGbzXQ" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
-										<i class="fab fa-spotify"></i>
-									</a>
-									<a href="email" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
-										<i class="fas fa-envelope-square"></i>
-									</a>
-								</div>
-								<div>
-									<a href="/donacion" style="display:none;">
-										<button class="bg-teal-500 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded">
-											Haz una donación
-										</button>
-									</a>
-									<a href="/socio">
-										<button class="bg-teal-500 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded">
-											Hazte socio
-										</button>
-									</a>
-								</div>
-							</div>
-						</nav>
-						<nav class="flex items-center justify-between flex-wrap bg-gray-700 py-2 px-6">
-							<a href="/quienes-somos" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white">
-								¿Quiénes somos?
-							</a>
-							<a href="/que-hacemos" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white">
-								¿Qué hacemos?
-							</a>
-							<a href="/socio" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white">
-								¿Qué puedes hacer tú?
-							</a>
-							<a href="/blog" style="display:none;" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white">
-								Blog
-							</a>
-						</nav>
-        @show
-
-        <div class='flex-1 mx-auto text-gray-900 max-w-4xl'>
+    <body class="antialiased bg-gray-200">
+      <div id="app" class="flex flex-col h-screen justify-between">
+		<header>
+			@include('layouts.header')
+		</header>
+        <main class='mb-auto mx-auto text-gray-900 max-w-4xl'>
             @yield('content')
-        </div>
-
-				<footer class="text-center w-full mt-16 bg-gray-900 p-4">
-					<div class="text-white">
-            Humancoop 2019 - 2020
-					</div>
-				</footer>
+        </main>
+		<footer class="text-center w-full mt-16 bg-gray-900 p-4">
+			@include('layouts.footer')
+		</footer>
       </div>
 	  <script src="{{ mix('js/app.js') }}"></script>
     </body>
