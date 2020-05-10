@@ -8,19 +8,15 @@ use Maatwebsite\Excel\Concerns\FromView;
 
 class NewMemberExport implements FromView
 {
-    protected $newMemberId;
-
-    public function __construct(/*Member $member*/ object $data)
+    public function __construct(NewMemberInfo $memberInfo)
     {
-        #$this->member = $member;
-        $this->data = $data;
+        $this->memberInfo = $memberInfo;
     }
 
     public function view(): View
     {
         return view('exports.new_member', [
-            #'new_member' => $this->member
-            'new_member' => $this->data
+            'new_member' => $this->memberInfo
         ]);
     }
 }

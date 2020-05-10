@@ -70,6 +70,8 @@
             <td></td>
         </tr>
         <tr>
+            <td style="color:#ffffff;background-color:#333333">Ya soy socio de HumanCoop</td>
+			<td>{{ $new_member->already_a_member ? 'Sí' : 'No' }}</td>
             <td style="color:#ffffff;background-color:#333333">Número de cuenta de voluntario</td>
 			<td>{{ $new_member->account_number }}</td>
         </tr>
@@ -77,6 +79,8 @@
             <td colspan="4" style="color:#ffffff;background-color:#2c7a7b;"><b>PERFIL PROFESIONAL Y EXPERIENCIA EN VOLUNTARIADO</b></td>
         </tr>
         <tr>
+            <td style="color:#ffffff;background-color:#333333">Soy sanitario</td>
+			<td>{{ $new_member->is_sanitary ? 'Sí' : 'No' }}</td>
             <td style="color:#ffffff;background-color:#333333">Formación</td>
 			<td>{{ $new_member->training }}</td>
         </tr>
@@ -97,10 +101,14 @@
 			<td>{{ $new_member->motivations }}</td>
         </tr>
         <tr>
+            <td style="color:#ffffff;background-color:#333333">Tengo experiencia en voluntariado</td>
+			<td>{{ $new_member->has_volunteering_experience ? 'Sí' : 'No' }}</td>
             <td style="color:#ffffff;background-color:#333333">¿Dónde?¿Qué actividad desarrollaste?</td>
 			<td>{{ $new_member->volunteering_experience_info }}</td>
         </tr>
         <tr>
+            <td style="color:#ffffff;background-color:#333333">Es mi primera vez en HumanCoop</td>
+			<td>{{ $new_member->first_time_in_humancoop ? 'Sí' : 'No' }}</td>
             <td style="color:#ffffff;background-color:#333333">¿Cómo nos conociste?</td>
 			<td>{{ $new_member->where_did_you_know }}</td>
         </tr>

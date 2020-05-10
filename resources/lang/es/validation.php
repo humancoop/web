@@ -172,6 +172,10 @@ return [
         'motivations' => 'motivaciones',
         'volunteering_experience_info' => 'actividad desarrollada',
         'where_did_you_know' => '¿Dónde nos conociste?',
+        'already_a_member' => 'ya soy miembro',
+        'is_sanitary' => 'soy sanitario',
+        'has_volunteering_experience' => 'tengo experiencia en voluntariado',
+        'first_time_in_humancoop' => 'primera vez en humancoop',
     ],
 
 ];

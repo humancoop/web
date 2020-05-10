@@ -56,6 +56,10 @@ class NewMemberController extends Controller
             'motivations' => 'required',
             'volunteering_experience_info' => 'required',
             'where_did_you_know' => 'required',
+            'already_a_member' => 'boolean',
+            'is_sanitary' => 'boolean',
+            'has_volunteering_experience' => 'boolean',
+            'first_time_in_humancoop' => 'boolean',
         ]);
 
         if ($validator->fails()) {
@@ -64,16 +68,7 @@ class NewMemberController extends Controller
                         ->withInput();
         }
 
-        $newMemberInfo = NewMemberInfo::create(array_merge(
-            $request->input(),
-            //TODO: This inputs still have to be designed
-            [
-                'is_sanitary' => True,
-                'has_volunteering_experience' => True,
-                'already_a_member' => True,
-                'first_time_in_humancoop' => True,
-            ]
-        ));
+        $newMemberInfo = NewMemberInfo::create($request->input());
         Excel::store(new NewMemberExport($newMemberInfo), "{$newMemberInfo->nif}.xlsx");
 
         return view('socio-confirm');
