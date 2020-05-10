@@ -63,19 +63,6 @@
 					</ul>
                 @enderror
             </div>
-            <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
-                    Código postal
-                </label>
-                <input class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-teal-500" id="postal_code" value="{{old('postal_code')}}" name="postal_code" type="text" placeholder="Código postal">
-                @error('postal_code')
-					<ul>
-						@foreach ($errors->get('postal_code') as $error)
-							<li class="text-red-500 text-xs italic">{{ $error }}</li>
-						@endforeach
-					</ul>
-                @enderror
-            </div>
         </div>
         <div class="flex flex-wrap -mx-3 mb-6">
             <div class="w-full px-3 mb-6 md:mb-0">
@@ -114,6 +101,21 @@
                 @error('province')
 					<ul>
 						@foreach ($errors->get('province') as $error)
+							<li class="text-red-500 text-xs italic">{{ $error }}</li>
+						@endforeach
+					</ul>
+                @enderror
+            </div>
+        </div>
+        <div class="flex flex-wrap -mx-3 mb-12">
+            <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
+                    Código postal
+                </label>
+                <input class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-teal-500" id="postal_code" value="{{old('postal_code')}}" name="postal_code" type="text" placeholder="Código postal">
+                @error('postal_code')
+					<ul>
+						@foreach ($errors->get('postal_code') as $error)
 							<li class="text-red-500 text-xs italic">{{ $error }}</li>
 						@endforeach
 					</ul>
@@ -294,7 +296,7 @@
         <div class="flex flex-wrap -mx-3 mb-12">
             <div class="w-full px-3 mb-6 md:mb-0">
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
-                    Sony sanitario
+                    Soy sanitario
                 </label>
                 <label class="text-gray-700 text-xs font-bold uppercase">No</label>
                 <div class="relative inline-block w-10 mr-2 ml-2 align-middle select-none">

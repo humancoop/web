@@ -49,21 +49,6 @@
                 @enderror
             </div>
         </div>
-        <div class="flex flex-wrap -mx-3 mb-12">
-            <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
-                    Código postal
-                </label>
-                <input class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-teal-500" id="postal_code" value="{{old('postal_code')}}" name="postal_code" type="text" placeholder="Código postal">
-                @error('postal_code')
-					<ul>
-						@foreach ($errors->get('postal_code') as $error)
-							<li class="text-red-500 text-xs italic">{{ $error }}</li>
-						@endforeach
-					</ul>
-                @enderror
-            </div>
-        </div>
         <div class="flex flex-wrap -mx-3 mb-6">
             <div class="w-full px-3 mb-6 md:mb-0">
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
@@ -101,6 +86,21 @@
                 @error('province')
 					<ul>
 						@foreach ($errors->get('province') as $error)
+							<li class="text-red-500 text-xs italic">{{ $error }}</li>
+						@endforeach
+					</ul>
+                @enderror
+            </div>
+        </div>
+        <div class="flex flex-wrap -mx-3 mb-12">
+            <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
+                    Código postal
+                </label>
+                <input class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-teal-500" id="postal_code" value="{{old('postal_code')}}" name="postal_code" type="text" placeholder="Código postal">
+                @error('postal_code')
+					<ul>
+						@foreach ($errors->get('postal_code') as $error)
 							<li class="text-red-500 text-xs italic">{{ $error }}</li>
 						@endforeach
 					</ul>
@@ -182,14 +182,14 @@
         <div class="flex flex-wrap -mx-3 mb-12">
             <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
-                    Aportación
+                    Aportación (€)
                 </label>
                 <div class="relative">
                     <select class="appearance-none border-2 bg-white border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-teal-500" id="account_number" value="{{old('account_number')}}" name="account_number" placeholder="Aportación">
-                        <option value="10">10 €</option>
-                        <option value="20">20 €</option>
-                        <option value="30">30 €</option>
-                        <option value="50">50 €</option>
+                        <option value="10">10</option>
+                        <option value="20">20</option>
+                        <option value="30">30</option>
+                        <option value="50">50</option>
                     </select>
                     <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
                       <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>

@@ -20,6 +20,7 @@ Route::get('/blog', function () {
 Route::get('/donacion', function () {
     return view('donacion');
 });
+Route::post('/donacion', 'NewDonationController@newDonationFormPost');
 Route::get('/que-puedes-hacer-tu', function () {
     return view('que-puedes-hacer-tu');
 });

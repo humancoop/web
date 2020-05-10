@@ -5,7 +5,7 @@
     <a href="/que-hacemos" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white">
         ¿Qué hacemos?
     </a>
-    <a href="/socio" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white">
+    <a href="/que-puedes-hacer-tu" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white">
         ¿Qué puedes hacer tú?
     </a>
     <a href="/blog" style="display:none;" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white">

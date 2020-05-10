@@ -5,12 +5,12 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Maatwebsite\Excel\Facades\Excel;
-use App\Exports\NewVolunteerExport;
-use App\NewVolunteerInfo;
+use App\Exports\NewDonationExport;
+use App\NewDonationInfo;
 
-class NewVolunteerController extends Controller
+class NewDonationController extends Controller
 {
-    public function newVolunteerFormPost(Request $request) {
+    public function newDonationFormPost(Request $request) {
 
          $validator = Validator::make($request->all(), [
             'full_name' => 'required',
@@ -63,13 +63,13 @@ class NewVolunteerController extends Controller
         ]);
 
         if ($validator->fails()) {
-            return redirect('voluntario')
+            return redirect('donacion')
                         ->withErrors($validator)
                         ->withInput();
         }
 
-        $newVolunteerInfo = NewVolunteerInfo::create($request->input());
-        Excel::store(new NewVolunteerExport($newVolunteerInfo), "voluntario_{$newVolunteerInfo->nif}.xlsx");
+        $newDonationInfo = NewDonationInfo::create($request->input());
+        Excel::store(new NewDonationExport($newDonationInfo), "voluntario_{$newDonationInfo->nif}.xlsx");
 
         return view('voluntario-confirm');
     }

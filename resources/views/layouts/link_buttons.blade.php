@@ -1,5 +1,5 @@
 <div>
-    <a href="/donacion" style="display:none;">
+    <a href="/donacion">
         <button class="bg-teal-500 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded">
             Haz una donación
         </button>
@@ -7,11 +7,6 @@
     <a href="/socio">
         <button class="bg-teal-500 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded">
             Hazte socio
-        </button>
-    </a>
-    <a href="/voluntario">
-        <button class="bg-teal-500 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded">
-            Hazte voluntario
         </button>
     </a>
 </div>

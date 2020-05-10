@@ -7,7 +7,7 @@
 	<div class="flex mb-4">
 		<div class="w-1/3 p-4">
 			<a href="/donacion">
-			<div class="max-w-sm rounded overflow-hidden shadow-lg" style="display:none">
+			<div class="max-w-sm rounded overflow-hidden shadow-lg">
                 <thumbor
                   src="{{ secure_asset('assets/images/dona.jpg') }}"
                   class="w-full"
