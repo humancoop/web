@@ -51,6 +51,7 @@ Route::get('/usuarios', function () {
 Route::get('/voluntario', function () {
     return view('voluntario');
 });
+Route::post('/voluntario', 'NewVolunteerController@newVolunteerFormPost');
 Route::get('/territorios-liberados-saharauis', function () {
     return view('territorios-liberados-saharauis');
 });

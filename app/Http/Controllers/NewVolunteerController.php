@@ -5,12 +5,12 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Maatwebsite\Excel\Facades\Excel;
-use App\Exports\NewMemberExport;
-use App\NewMemberInfo;
+use App\Exports\NewVolunteerExport;
+use App\NewVolunteerInfo;
 
-class NewMemberController extends Controller
+class NewVolunteerController extends Controller
 {
-    public function newMemberFormPost(Request $request) {
+    public function newVolunteerFormPost(Request $request) {
 
          $validator = Validator::make($request->all(), [
             'full_name' => 'required',
@@ -68,10 +68,10 @@ class NewMemberController extends Controller
                         ->withInput();
         }
 
-        $newMemberInfo = NewMemberInfo::create($request->input());
-        Excel::store(new NewMemberExport($newMemberInfo), "socio_{$newMemberInfo->nif}.xlsx");
+        $newVolunteerInfo = NewVolunteerInfo::create($request->input());
+        Excel::store(new NewVolunteerExport($newVolunteerInfo), "voluntario_{$newVolunteerInfo->nif}.xlsx");
 
-        return view('socio-confirm');
+        return view('voluntario-confirm');
     }
 
 }
