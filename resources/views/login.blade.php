@@ -3,33 +3,42 @@
 @section('title', 'Login')
 
 @section('content')
-		<div class="flex justify-center">
-			<div class="w-full max-w-xs">
-				<form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
-					<div class="mb-4">
-						<label class="block text-gray-700 text-sm font-bold mb-2" for="username">
-							Usuario
-						</label>
-						<input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="Username">
-					</div>
-					<div class="mb-6">
-						<label class="block text-gray-700 text-sm font-bold mb-2" for="password">
-							Contraseña
-						</label>
-						<input class="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="password" type="password" placeholder="******************">
-						<p class="text-red-500 text-xs italic">Por favor, introduzca la contraseña.</p>
-					</div>
-					<div class="flex items-center justify-between">
-						<a href="/admin">
-							<button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
-								Acceder
-							</button>
-						</a>
-						<a class="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800" href="/recordar-contrasena">
-							Recordar contraseña
-						</a>
-					</div>
-				</form>
-			</div>
-		</div>
+<form class="mt-6 p-10 w-full bg-gray-400 rounded" method="POST" action="/login">
+    @csrf
+    <div class="flex flex-wrap -mx-3 mb-6">
+        <div class="w-full px-3 mb-6 md:mb-0">
+            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
+                Usuario
+            </label>
+            <input class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-teal-500" id="user" value="{{old('user')}}" name="user" type="text" placeholder="Usuario">
+            @error('user')
+                <ul>
+                    @foreach ($errors->get('user') as $error)
+                        <li class="text-red-500 text-xs italic">{{ $error }}</li>
+                    @endforeach
+                </ul>
+            @enderror
+        </div>
+    </div>
+    <div class="flex flex-wrap -mx-3 mb-6">
+        <div class="w-full px-3 mb-6 md:mb-0">
+            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
+                Contraseña
+            </label>
+            <input class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-teal-500" id="password" value="{{old('password')}}" name="password" type="password" placeholder="Contraseña">
+            @error('password')
+                <ul>
+                    @foreach ($errors->get('password') as $error)
+                        <li class="text-red-500 text-xs italic">{{ $error }}</li>
+                    @endforeach
+                </ul>
+            @enderror
+        </div>
+    </div>
+    <div class="md:flex md:items-center">
+        <button class="bg-teal-500 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded">
+            Acceder
+        </button>
+    </div>
+</form>
 @endsection

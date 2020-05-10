@@ -5,8 +5,6 @@
  */
 
 import VueLazyload from 'vue-lazyload';
-require('./bootstrap');
-
 window.Vue = require('vue');
 
 /**
