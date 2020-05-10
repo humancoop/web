@@ -64,7 +64,7 @@ class NewMemberController extends Controller
                         ->withInput();
         }
 
-        NewMemberInfo::create(array_merge(
+        $newMemberInfo = NewMemberInfo::create(array_merge(
             $request->input(),
             //TODO: This inputs still have to be designed
             [
@@ -74,7 +74,7 @@ class NewMemberController extends Controller
                 'first_time_in_humancoop' => True,
             ]
         ));
-        Excel::store(new NewMemberExport((object) $request->input()), "{$request->get('nif')}.xlsx");
+        Excel::store(new NewMemberExport($newMemberInfo), "{$newMemberInfo->nif}.xlsx");
 
         return view('socio-confirm');
     }
