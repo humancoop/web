@@ -18,11 +18,12 @@ class CreateNewVolunteerInfosTable extends Migration
             $table->string('full_name');
             $table->string('birthplace');
             $table->date('birthdate');
-            $table->string('province');
+            $table->string('bithprovince');
             $table->string('postal_code');
             $table->string('address');
             $table->string('city');
             $table->string('email');
+            $table->string('province');
             $table->string('phone_number');
             $table->string('secondary_phone_number');
             $table->string('nif');

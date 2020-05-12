@@ -1,13 +1,7 @@
 <table>
     <tbody>
         <tr>
-            <td><b>Número de socio:</b></td>
-            <td></td>
-        </tr>
-        <tr>
-        </tr>
-        <tr>
-            <td colspan="4" style="color:#ffffff;background-color:#2c7a7b;"><b>DATOS PERSONALES Y DATOS VISADO</b></td>
+            <td colspan="4" style="color:#ffffff;background-color:#2c7a7b;"><b>DATOS</b></td>
         </tr>
         <tr>
             <td style="color:#ffffff;background-color:#333333">Nombre y apellidos</td>
@@ -32,8 +26,8 @@
         <tr>
             <td style="color:#ffffff;background-color:#333333">Localidad</td>
 			<td>{{ $new_donation->city }}</td>
-            <td style="color:#ffffff;background-color:#333333">Teléfono móvil</td>
-			<td>{{ $new_donation->phone_number }}</td>
+            <td style="color:#ffffff;background-color:#333333" width="33">Teléfono móvil</td>
+			<td width="66">{{ $new_donation->phone_number }}</td>
         </tr>
         <tr>
             <td style="color:#ffffff;background-color:#333333" width="33">Otro número de contacto</td>
@@ -50,16 +44,13 @@
 			<td>{{ $new_donation->amount }}</td>
         </tr>
         <tr>
-            <td colspan="4" style="color:#ffffff;background-color:#2c7a7b;"><b>DATOS DE SOCIO (APARTADO INTERNO A RELLENAR)</b></td>
+            <td colspan="4" style="color:#ffffff;background-color:#2c7a7b;"><b>APARTADO INTERNO A RELLENAR</b></td>
         </tr>
         <tr>
-			<td>Contrato firmado</td>
+			<td>Ley de protección de datos firmada</td>
         </tr>
         <tr>
-			<td>Ley de protección dedatos firmada</td>
-        </tr>
-        <tr>
-			<td>Justificante pago socio</td>
+			<td>Justificante pago</td>
         </tr>
     </tbody>
 </table>

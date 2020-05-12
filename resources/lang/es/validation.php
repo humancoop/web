@@ -165,6 +165,7 @@ return [
         'issue_location' => 'lugar de expedición',
         'validity_date' => 'fecha de validez',
         'account_number' => 'número de cuenta voluntario',
+        'account_owner_name' => 'nombre del titular',
         'training' => 'formación',
         'professional_experience' => 'experiencia profesional',
         'years_of_experience' => 'años de experiencia',
@@ -176,6 +177,8 @@ return [
         'is_sanitary' => 'soy sanitario',
         'has_volunteering_experience' => 'tengo experiencia en voluntariado',
         'first_time_in_humancoop' => 'primera vez en humancoop',
+        'amount' => 'aportación',
+        'period' => 'periodicidad',
     ],
 
 ];

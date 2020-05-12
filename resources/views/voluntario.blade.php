@@ -54,10 +54,10 @@
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
                     Provincia
                 </label>
-                <input class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-teal-500" id="province" value="{{old('province')}}" name="province" type="text" placeholder="Provincia">
-                @error('province')
+                <input class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-teal-500" id="birthprovince" value="{{old('birthprovince')}}" name="birthprovince" type="text" placeholder="Provincia">
+                @error('birthprovince')
 					<ul>
-						@foreach ($errors->get('province') as $error)
+						@foreach ($errors->get('birthprovince') as $error)
 							<li class="text-red-500 text-xs italic">{{ $error }}</li>
 						@endforeach
 					</ul>
@@ -153,7 +153,7 @@
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
                     Otro número de contacto
                 </label>
-                <input class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-teal-500" id="secondary_phone_number" value="{{old('secondary_phone_number')}}" name="secondary_phone_number" type="tel" placeholder="Otro móvil de contacto">
+                <input class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-teal-500" id="secondary_phone_number" value="{{old('secondary_phone_number')}}" name="secondary_phone_number" type="tel" placeholder="Otro número de contacto">
                 @error('secondary_phone_number')
 					<ul>
 						@foreach ($errors->get('secondary_phone_number') as $error)

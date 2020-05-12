@@ -15,6 +15,7 @@ class NewVolunteerInfo extends Model
         'full_name',
         'birthplace',
         'birthdate',
+        'birthprovince',
         'province',
         'postal_code',
         'address',

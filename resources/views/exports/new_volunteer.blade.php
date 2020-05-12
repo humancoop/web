@@ -21,7 +21,7 @@
         </tr>
         <tr>
             <td style="color:#ffffff;background-color:#333333">Provincia</td>
-			<td>{{ $new_volunteer->province }}</td>
+			<td>{{ $new_volunteer->birthprovince }}</td>
             <td style="color:#ffffff;background-color:#333333">Código postal</td>
 			<td>{{ $new_volunteer->postal_code }}</td>
         </tr>
@@ -131,7 +131,7 @@
 			<td>Contrato firmado</td>
         </tr>
         <tr>
-			<td>Ley de protección dedatos firmada</td>
+			<td>Ley de protección de datos firmada</td>
         </tr>
         <tr>
 			<td>Pasaporte</td>

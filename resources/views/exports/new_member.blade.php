@@ -32,8 +32,8 @@
         <tr>
             <td style="color:#ffffff;background-color:#333333">Localidad</td>
 			<td>{{ $new_member->city }}</td>
-            <td style="color:#ffffff;background-color:#333333">Teléfono móvil</td>
-			<td>{{ $new_member->phone_number }}</td>
+            <td style="color:#ffffff;background-color:#333333" width="33">Teléfono móvil</td>
+			<td width="66">{{ $new_member->phone_number }}</td>
         </tr>
         <tr>
             <td style="color:#ffffff;background-color:#333333" width="33">Otro número de contacto</td>
@@ -62,7 +62,7 @@
 			<td>Contrato firmado</td>
         </tr>
         <tr>
-			<td>Ley de protección dedatos firmada</td>
+			<td>Ley de protección de datos firmada</td>
         </tr>
         <tr>
 			<td>Justificante pago socio</td>
