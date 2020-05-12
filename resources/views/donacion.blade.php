@@ -164,15 +164,14 @@
 					</ul>
                 @enderror
             </div>
-            <!-- TODOs=: Nombre y apellidos del titular -->
             <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
                     Nombre del titular
                 </label>
-                <input class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-teal-500" id="account_number" value="{{old('account_number')}}" name="account_number" type="text" placeholder="Nombre del titular">
-                @error('account_number')
+                <input class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-teal-500" id="account_owner_name" value="{{old('account_owner_name')}}" name="account_owner_name" type="text" placeholder="Nombre del titular">
+                @error('account_owner_name')
 					<ul>
-						@foreach ($errors->get('account_number') as $error)
+						@foreach ($errors->get('account_owner_name') as $error)
 							<li class="text-red-500 text-xs italic">{{ $error }}</li>
 						@endforeach
 					</ul>
@@ -184,7 +183,7 @@
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
                     Aportación (€)
                 </label>
-                <input class="appearance-none border-2 bg-white border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-teal-500" id="account_number" value="{{old('account_number')}}" min=1 type="number" name="account_number" placeholder="Aportación"></input>
+                <input class="appearance-none border-2 bg-white border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-teal-500" id="amount" value="{{old('amount')}}" min=1 type="number" name="amount" placeholder="Aportación"></input>
                 @error('amount')
 					<ul>
 						@foreach ($errors->get('amount') as $error)

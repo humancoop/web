@@ -164,15 +164,14 @@
 					</ul>
                 @enderror
             </div>
-            <!-- TODOs=: Nombre y apellidos del titular -->
             <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
                     Nombre del titular
                 </label>
-                <input class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-teal-500" id="account_number" value="{{old('account_number')}}" name="account_number" type="text" placeholder="Nombre del titular">
-                @error('account_number')
+                <input class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-teal-500" id="account_owner_name" value="{{old('account_owner_name')}}" name="account_owner_name" type="text" placeholder="Nombre del titular">
+                @error('account_owner_name')
 					<ul>
-						@foreach ($errors->get('account_number') as $error)
+						@foreach ($errors->get('account_owner_name') as $error)
 							<li class="text-red-500 text-xs italic">{{ $error }}</li>
 						@endforeach
 					</ul>
@@ -185,7 +184,7 @@
                     Aportación (€)
                 </label>
                 <div class="relative">
-                    <select class="appearance-none border-2 bg-white border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-teal-500" id="account_number" value="{{old('account_number')}}" name="account_number" placeholder="Aportación">
+                    <select class="appearance-none border-2 bg-white border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-teal-500" id="amount" value="{{old('amount')}}" name="amount" placeholder="Aportación">
                         <option value="10">10</option>
                         <option value="20">20</option>
                         <option value="30">30</option>
@@ -208,7 +207,7 @@
                     Perodicidad
                 </label>
                 <div class="relative">
-                    <select class="appearance-none bg-white border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-teal-500" id="account_number" value="{{old('account_number')}}" name="account_number" placeholder="Aportación">
+                    <select class="appearance-none bg-white border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-teal-500" id="period" value="{{old('period')}}" name="period" placeholder="Periodicidad">
                         <option value="1">Mensual</option>
                         <option value="2">Trimestral</option>
                         <option value="3">Semestral</option>
@@ -218,9 +217,9 @@
                       <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
                     </div>
                 </div>
-                @error('amount')
+                @error('period')
 					<ul>
-						@foreach ($errors->get('amount') as $error)
+						@foreach ($errors->get('period') as $error)
 							<li class="text-red-500 text-xs italic">{{ $error }}</li>
 						@endforeach
 					</ul>

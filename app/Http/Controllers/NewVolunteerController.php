@@ -19,7 +19,7 @@ class NewVolunteerController extends Controller
             'province' => 'required',
             'postal_code' => [
                 'required',
-                'regex:/^0[1-9][0-9]{3}|[1-4][0-9]{4}|5[0-2][0-9]{3}$/i',
+                'regex:/^(?:0[1-9]|[1-4]\d|5[0-2])\d{3}$/i',
             ],
             'address' => 'required',
             'email' => 'required|email:rfc,dns',
