@@ -5,17 +5,16 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Maatwebsite\Excel\Facades\Excel;
-use App\Exports\NewMemberExport;
-use App\NewMemberInfo;
+use App\Exports\NewDonationExport;
+use App\NewDonationInfo;
 
-class NewMemberController extends Controller
+class NewDonationController extends Controller
 {
-    public function newMemberFormPost(Request $request) {
+    public function newDonationFormPost(Request $request) {
 
          $validator = Validator::make($request->all(), [
             'full_name' => 'required',
             'birthdate' => 'required|date',
-            'birthprovince' => 'required',
             'nif' => [
                 'required',
                 'regex:/^[0-9]{8}[TRWAGMYFPDXBNJZSQVHLCKE]$/i',
@@ -42,20 +41,18 @@ class NewMemberController extends Controller
             ],
             'account_owner_name' => 'required',
             'amount' => 'required|numeric|min:10',
-            'period' => 'required|numeric',
-            'where_did_you_know' => 'required',
         ]);
 
         if ($validator->fails()) {
-            return redirect('socio')
+            return redirect('donacion')
                         ->withErrors($validator)
                         ->withInput();
         }
 
-        $newMemberInfo = NewMemberInfo::create($request->input());
-        Excel::store(new NewMemberExport($newMemberInfo), "socio_{$newMemberInfo->nif}.xlsx");
+        $newDonationInfo = NewDonationInfo::create($request->input());
+        Excel::store(new NewDonationExport($newDonationInfo), "donacion_{$newDonationInfo->nif}.xlsx");
 
-        return view('socio-confirm');
+        return view('donacion-confirm');
     }
 
 }

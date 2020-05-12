@@ -20,6 +20,7 @@ Route::get('/blog', function () {
 Route::get('/donacion', function () {
     return view('donacion');
 });
+Route::post('/donacion', 'NewDonationController@newDonationFormPost');
 Route::get('/que-puedes-hacer-tu', function () {
     return view('que-puedes-hacer-tu');
 });
@@ -51,6 +52,7 @@ Route::get('/usuarios', function () {
 Route::get('/voluntario', function () {
     return view('voluntario');
 });
+Route::post('/voluntario', 'NewVolunteerController@newVolunteerFormPost');
 Route::get('/territorios-liberados-saharauis', function () {
     return view('territorios-liberados-saharauis');
 });

@@ -10,7 +10,7 @@
 			<div class="max-w-sm rounded shadow-lg p-4 bg-white">
                 <thumbor
                   src="{{ secure_asset('assets/images/Human-coop-sahara.png') }}"
-                  width="200"
+                  width="352"
                   height=""
                   class="w-full"
                 /></thumbor>

@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class NewMemberInfo extends Model
+class NewDonationInfo extends Model
 {
     /**
      * The attributes that are mass assignable.
@@ -25,7 +25,5 @@ class NewMemberInfo extends Model
         'account_number',
         'account_owner_name',
         'amount',
-        'period',
-        'where_did_you_know',
     ];
 }
