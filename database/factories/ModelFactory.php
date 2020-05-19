@@ -60,6 +60,7 @@ $factory->define(NewVolunteerInfo::class, function (Faker $faker) {
         'full_name' => $faker->name,
         'birthplace' => $faker->city,
         'birthdate' => $faker->date,
+        'birthprovince' => $faker->name,
         'province' => $faker->name,
         'postal_code' => $faker->numerify('28###'),
         'address' => $faker->address,

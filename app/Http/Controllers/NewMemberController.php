@@ -15,7 +15,6 @@ class NewMemberController extends Controller
          $validator = Validator::make($request->all(), [
             'full_name' => 'required',
             'birthdate' => 'required|date',
-            'birthprovince' => 'required',
             'nif' => [
                 'required',
                 'regex:/^[0-9]{8}[TRWAGMYFPDXBNJZSQVHLCKE]$/i',
