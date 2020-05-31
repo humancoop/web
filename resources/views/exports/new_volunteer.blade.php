@@ -88,7 +88,7 @@
             <td style="color:#ffffff;background-color:#333333">Alergias</td>
 			<td>{{ $new_volunteer->allergies }}</td>
             <td style="color:#ffffff;background-color:#333333">Intolerancias</td>
-			<td>{{ $new_volunteer->intolerancies }}</td>
+			<td>{{ $new_volunteer->intolerances }}</td>
         </tr>
         <tr>
             <td style="color:#ffffff;background-color:#333333">Enfermedades previas</td>
