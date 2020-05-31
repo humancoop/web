@@ -27,6 +27,6 @@ class NewVolunteerRequestTest extends TestCase
         $response = $this->post('/voluntario', $data);
         $response->assertViewIs('voluntario-confirm');
         $this->assertEquals(1, NewVolunteerInfo::count());
-        $this->assertEquals($data['full_name'], NewVolunteerInfo::first()->full_name);
+        $this->assertEquals($data['first_name'], NewVolunteerInfo::first()->first_name);
     }
 }

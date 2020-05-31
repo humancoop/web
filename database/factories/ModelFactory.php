@@ -57,10 +57,10 @@ $factory->define(NewMemberInfo::class, function (Faker $faker) {
 
 $factory->define(NewVolunteerInfo::class, function (Faker $faker) {
     return [
-        'full_name' => $faker->name,
+        'first_name' => $faker->name,
+        'last_name' => $faker->name,
         'birthplace' => $faker->city,
         'birthdate' => $faker->date,
-        'birthprovince' => $faker->name,
         'province' => $faker->name,
         'postal_code' => $faker->numerify('28###'),
         'address' => $faker->address,
@@ -70,6 +70,12 @@ $factory->define(NewVolunteerInfo::class, function (Faker $faker) {
         'secondary_phone_number' => $faker->tollFreeNumber,
         'nif' => $faker->dni,
         'passport_number' =>  $faker->numerify('ERT######'),
+        'marital_status' => $faker->name,
+        'children_number' => $faker->randomDigit,
+        'allergies' => $faker->name,
+        'intolerances' => $faker->name,
+        'previous_illnesses' => $faker->optional()->name,
+        'medication' => $faker->optional()->name,
         'father_name' => $faker->name,
         'mother_name' => $faker->name,
         'issue_date' => $faker->date,
@@ -81,10 +87,10 @@ $factory->define(NewVolunteerInfo::class, function (Faker $faker) {
         'training' => $faker->jobTitle,
         'professional_experience' => $faker->jobTitle,
         'years_of_experience' => $faker->randomDigit,
-        'speciality' => $faker->jobTitle,
+        'speciality' => $faker->optional()->jobTitle,
         'motivations' => $faker->text,
         'has_volunteering_experience' => $faker->boolean,
-        'volunteering_experience_info' => $faker->text,
+        'volunteering_experience_info' => $faker->optional()->text,
         'first_time_in_humancoop' => $faker->boolean,
         'where_did_you_know' => $faker->text,
     ];
