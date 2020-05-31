@@ -7,14 +7,27 @@
     <form class="p-10 w-full bg-gray-400 rounded" method="POST" action="/voluntario">
         @csrf
         <div class="flex flex-wrap -mx-3 mb-6">
-            <div class="w-full px-3 mb-6 md:mb-0">
+            <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
-                    Nombre y apellidos
+                    Nombre
                 </label>
-                <input class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-teal-500" id="full_name" value="{{old('full_name')}}" name="full_name" type="text" placeholder="Nombre y apellidos">
-                @error('full_name')
+                <input class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-teal-500" id="first_name" value="{{old('first_name')}}" name="first_name" type="text" placeholder="Nombre">
+                @error('first_name')
 					<ul>
-						@foreach ($errors->get('full_name') as $error)
+						@foreach ($errors->get('first_name') as $error)
+							<li class="text-red-500 text-xs italic">{{ $error }}</li>
+						@endforeach
+					</ul>
+                @enderror
+            </div>
+            <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
+                    Apellidos
+                </label>
+                <input class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-teal-500" id="last_name" value="{{old('last_name')}}" name="last_name" type="text" placeholder="Apellidos">
+                @error('last_name')
+					<ul>
+						@foreach ($errors->get('last_name') as $error)
 							<li class="text-red-500 text-xs italic">{{ $error }}</li>
 						@endforeach
 					</ul>
@@ -43,21 +56,6 @@
                 @error('birthdate')
 					<ul>
 						@foreach ($errors->get('birthdate') as $error)
-							<li class="text-red-500 text-xs italic">{{ $error }}</li>
-						@endforeach
-					</ul>
-                @enderror
-            </div>
-        </div>
-        <div class="flex flex-wrap -mx-3 mb-12">
-            <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
-                    Provincia
-                </label>
-                <input class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-teal-500" id="birthprovince" value="{{old('birthprovince')}}" name="birthprovince" type="text" placeholder="Provincia">
-                @error('birthprovince')
-					<ul>
-						@foreach ($errors->get('birthprovince') as $error)
 							<li class="text-red-500 text-xs italic">{{ $error }}</li>
 						@endforeach
 					</ul>
@@ -151,9 +149,9 @@
             </div>
             <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
-                    Otro número de contacto
+                    Móvil de contacto familiar
                 </label>
-                <input class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-teal-500" id="secondary_phone_number" value="{{old('secondary_phone_number')}}" name="secondary_phone_number" type="tel" placeholder="Otro número de contacto">
+                <input class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-teal-500" id="secondary_phone_number" value="{{old('secondary_phone_number')}}" name="secondary_phone_number" type="tel" placeholder="Móvil de contacto familiar">
                 @error('secondary_phone_number')
 					<ul>
 						@foreach ($errors->get('secondary_phone_number') as $error)
@@ -166,12 +164,12 @@
         <div class="flex flex-wrap -mx-3 mb-6">
             <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
-                    Nif
+                    Estado civil
                 </label>
-                <input class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-teal-500" id="nif" value="{{old('nif')}}" name="nif" type="text" placeholder="Nif">
-                @error('nif')
+                <input class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-teal-500" id="marital_status" value="{{old('marital_status')}}" name="marital_status" type="text" placeholder="Estado civil">
+                @error('marital_status')
 					<ul>
-						@foreach ($errors->get('nif') as $error)
+						@foreach ($errors->get('marital_status') as $error)
 							<li class="text-red-500 text-xs italic">{{ $error }}</li>
 						@endforeach
 					</ul>
@@ -179,12 +177,12 @@
             </div>
             <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
-                    Número de pasaporte
+                    Número de hijos
                 </label>
-                <input class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-teal-500" id="passport_number" value="{{old('passport_number')}}" name="passport_number" type="text" placeholder="Número de pasaporte">
-                @error('passport_number')
+                <input class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-teal-500" id="children_number" value="{{old('children_number')}}" name="children_number" type="number" min="0" placeholder="Número de hijos">
+                @error('children_number')
 					<ul>
-						@foreach ($errors->get('passport_number') as $error)
+						@foreach ($errors->get('children_number') as $error)
 							<li class="text-red-500 text-xs italic">{{ $error }}</li>
 						@endforeach
 					</ul>
@@ -213,6 +211,34 @@
                 @error('mother_name')
 					<ul>
 						@foreach ($errors->get('mother_name') as $error)
+							<li class="text-red-500 text-xs italic">{{ $error }}</li>
+						@endforeach
+					</ul>
+                @enderror
+            </div>
+        </div>
+        <div class="flex flex-wrap -mx-3 mb-6">
+            <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
+                    Nif
+                </label>
+                <input class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-teal-500" id="nif" value="{{old('nif')}}" name="nif" type="text" placeholder="Nif">
+                @error('nif')
+					<ul>
+						@foreach ($errors->get('nif') as $error)
+							<li class="text-red-500 text-xs italic">{{ $error }}</li>
+						@endforeach
+					</ul>
+                @enderror
+            </div>
+            <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
+                    Número de pasaporte
+                </label>
+                <input class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-teal-500" id="passport_number" value="{{old('passport_number')}}" name="passport_number" type="text" placeholder="Número de pasaporte">
+                @error('passport_number')
+					<ul>
+						@foreach ($errors->get('passport_number') as $error)
 							<li class="text-red-500 text-xs italic">{{ $error }}</li>
 						@endforeach
 					</ul>
@@ -293,6 +319,62 @@
                 @enderror
             </div>
         </div>
+        <div class="flex flex-wrap -mx-3 mb-6">
+            <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
+                    Alergias
+                </label>
+                <input class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-teal-500" id="allergies" value="{{old('allergies')}}" name="allergies" type="text" placeholder="Alergias">
+                @error('allergies')
+					<ul>
+						@foreach ($errors->get('allergies') as $error)
+							<li class="text-red-500 text-xs italic">{{ $error }}</li>
+						@endforeach
+					</ul>
+                @enderror
+            </div>
+            <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
+                    Intolerancias
+                </label>
+                <input class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-teal-500" id="intolerances" value="{{old('intolerances')}}" name="intolerances" type="text" placeholder="Intolerancias">
+                @error('intolerances')
+					<ul>
+						@foreach ($errors->get('intolerances') as $error)
+							<li class="text-red-500 text-xs italic">{{ $error }}</li>
+						@endforeach
+					</ul>
+                @enderror
+            </div>
+        </div>
+        <div class="flex flex-wrap -mx-3 mb-6">
+            <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
+                    Enfermedades previas (opcional)
+                </label>
+                <input class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-teal-500" id="previous_illnesses" value="{{old('previous_illnesses')}}" name="previous_illnesses" type="text" placeholder="Efermedades previas">
+                @error('previous_illnesses')
+					<ul>
+						@foreach ($errors->get('previous_illnesses') as $error)
+							<li class="text-red-500 text-xs italic">{{ $error }}</li>
+						@endforeach
+					</ul>
+                @enderror
+            </div>
+            <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
+                    Medicación previa (opcional)
+                </label>
+                <input class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-teal-500" id="medication" value="{{old('medication')}}" name="medication" type="text" placeholder="Medicación previa">
+                @error('medication')
+					<ul>
+						@foreach ($errors->get('medication') as $error)
+							<li class="text-red-500 text-xs italic">{{ $error }}</li>
+						@endforeach
+					</ul>
+                @enderror
+            </div>
+        </div>
         <div class="flex flex-wrap -mx-3 mb-12">
             <div class="w-full px-3 mb-6 md:mb-0">
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
@@ -329,7 +411,7 @@
             </div>
             <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
-                    Especialidad
+                    Especialidad (si procede)
                 </label>
                 <input class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-teal-500" id="speciality" value="{{old('speciality')}}" name="speciality" type="text" placeholder="Especialidad">
                 @error('speciality')

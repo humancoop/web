@@ -147,7 +147,14 @@ return [
     */
 
     'attributes' => [
-        'full_name' => 'nombre y apellidos',
+        'first_name' => 'nombre',
+        'last_name' => 'apellidos',
+        'marital_status' => 'estado civil',
+        'children_number' => 'número de hijos',
+        'allergies' => 'alergias',
+        'intolerances' => 'intolerancias',
+        'previous_illnesses' => 'enfermedades previas',
+        'medication' => 'medicación habitual',
         'birthplace' => 'lugar de nacimiento',
         'birthdate' => 'fecha de nacimiento',
         'province' => 'provincia',

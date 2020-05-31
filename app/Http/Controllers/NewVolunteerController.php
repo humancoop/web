@@ -13,7 +13,8 @@ class NewVolunteerController extends Controller
     public function newVolunteerFormPost(Request $request) {
 
          $validator = Validator::make($request->all(), [
-            'full_name' => 'required',
+            'first_name' => 'required',
+            'last_name' => 'required',
             'birthplace' => 'required',
             'birthdate' => 'required|date',
             'province' => 'required',
@@ -44,17 +45,19 @@ class NewVolunteerController extends Controller
             'mother_name' => 'required',
             'issue_date' => 'required|date',
             'issue_location' => 'required',
+            'children_number' => 'required|numeric|min:0',
+            'marital_status' => 'required',
+            'allergies' => 'required',
+            'intolerances' => 'required',
             'validity_date' => 'required|date',
             'account_number' => [
-				'required',
+				'nullable',
                 'regex:/^ES\d{2}[ ]\d{4}[ ]\d{4}[ ]\d{4}[ ]\d{4}[ ]\d{4}|ES\d{22}$/i',
             ],
             'training' => 'required',
             'professional_experience' => 'required',
             'years_of_experience' => 'required|numeric|min:0',
-            'speciality' => 'required',
             'motivations' => 'required',
-            'volunteering_experience_info' => 'required',
             'where_did_you_know' => 'required',
             'already_a_member' => 'boolean',
             'is_sanitary' => 'boolean',
