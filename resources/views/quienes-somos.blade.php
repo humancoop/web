@@ -73,6 +73,5 @@
 			</div>
 			</a>
 		</div>
-		</div>
 	</div>
 @stop
