@@ -3,15 +3,10 @@
 @section('title', 'Territorios liberados saharauis')
 
 @section('content')
-  <h1 class="text-6xl text-center">Territorios liberados saharauis</h1>
-	<div class="bg-gray-400">
-        <thumbor
-          src="{{ secure_asset('assets/images/coche_dia.jpg') }}"
-          class="object-cover w-full"
-          width="896"
-          height=""
-        /></thumbor>
-	</div>
+    <video controls width="100%" class="mt-4">
+    	<source src="{{ secure_asset('assets/introduccion.mp4') }}" type="video/mp4">
+    	Sorry, your browser doesn't support embedded videos.
+	</video>
 	<p class='text-justify py-4'>
 		HumanCoop Sáhara desarrolla su actividad en los Territorios Liberados del Sáhara Occidental, que comprende el área del Sáhara Occidental que se encuentra al este del muro fronterizo marroquí y al oeste y al norte de las fronteras con Argelia y Mauritania, respectivamente. Territorios liberados se encuentra separado del resto del territorio del Sáhara Occidental por un muro de 2200 kilómetros. Los principales asentamientos son: Agüenit, Bir Lehlu, Bir Tiguisit, Dougaj, Mehaires, Miyek, Tifariti y Zug. La población de los Territorios Liberados se estima en unos 30.000 habitantes.
 	</p>
