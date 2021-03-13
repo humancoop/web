@@ -3,8 +3,9 @@
 @section('title', 'Territorios liberados saharauis')
 
 @section('content')
-    <video controls width="100%" class="mt-4">
-    	<source src="{{ secure_asset('assets/introduccion.mp4') }}" type="video/mp4">
+  	<h1 class="text-4xl mt-4 text-center">Territorios liberados del Sáhara Occidental</h1>
+    <video controls width="100%" class="mt-4" poster="https://videos-humancoop.s3-eu-west-1.amazonaws.com/introduccion.png">
+    	<source src="https://videos-humancoop.s3-eu-west-1.amazonaws.com/introduccion.mp4" type="video/mp4">
     	Sorry, your browser doesn't support embedded videos.
 	</video>
 	<p class='text-justify py-4'>
