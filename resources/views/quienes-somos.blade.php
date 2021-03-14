@@ -51,6 +51,13 @@
 			</p>
 		</div>
 		<div class="w-1/6">
+			<a href="/quienes-somos/voluntarios">
+			<div class="max-w-sm overflow-hidden bg-gray-500 my-2">
+				<div class="px-6 py-4">
+					<div class="font-bold text-xl mb-2">Voluntarios</div>
+				</div>
+			</div>
+			</a>
 			<a href="/quienes-somos/junta">
 			<div class="max-w-sm overflow-hidden bg-gray-500 my-2">
 				<div class="px-6 py-4">
